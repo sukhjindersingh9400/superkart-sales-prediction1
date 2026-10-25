@@ -1,10 +1,9 @@
-
 import streamlit as st
 import pandas as pd
 import requests
 
 # Base URL of the Flask backend
-BACKEND_URL = "http://backend:7860"
+BACKEND_URL = "https://github.com/sukhjindersingh9400/superkart-sales-prediction1/blob/main/backend"
 
 # Page title
 st.title("SuperKart System")
@@ -49,7 +48,7 @@ if st.button("Predict", type='primary'):
     if response.status_code == 200:
         result = response.json()
         predicted_sales = result["Sales"]
-        st.success(f"Predicted Product Store Sales Total: ₹{predicted_sales:.2f}")
+        st.success(f"Predicted Product Store Sales Total: ‹{predicted_sales:.2f}")
     else:
         st.error("Unable to connect to the prediction API.")
 
